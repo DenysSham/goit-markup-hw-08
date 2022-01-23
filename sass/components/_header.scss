@@ -1,94 +1,92 @@
-.header {
-  border-bottom: 1px solid #ececec;
-}
-.header__block {
-  display: flex;
-}
-.site-nav {
-  display: flex;
-}
-.site-nav__link {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
-}
+// .header {
+//   border-bottom: 1px solid #ececec;
+// }
+// .header__block {
+//   display: flex;
+// }
+// .site-nav {
+//   display: flex;
+// }
+// .site-nav__link {
+//   padding-top: 24px;
+//   padding-bottom: 25px;
+//   margin-right: 93px;
+// }
 
-.site-nav__logo-part1 {
-  @extend %logo;
-  color: $current-color;
-}
-.site-nav__logo-part2 {
-  @extend %logo;
-  color: $primary-text-color;
-}
-.site-nav__list {
-  display: flex;
-}
-.site-nav__list-item:not(:last-child) {
-  margin-right: 50px;
-}
-.site-nav__list-link {
-  display: block;  
-  padding: 32px 0;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  color:  $primary-text-color ;
-  transition: color 250ms  $timing-function ;
-}
-.site-nav__list-link:focus,
-.site-nav__list-link:hover {
-  color:  $current-color ;
-}
-.site-nav__list-item {
-  position: relative;
-}
-.site-nav__list-link--current::after {
-  content: '';
-  position: absolute;
-  transform: translateX(-100%);
-  bottom: 0px;
-  width: 100%;
-  border-bottom: solid 4px  $current-color ;
-  border-radius: 2px;
-}
-.site-nav__list-link--current {
-  color:  $current-color ;
-}
-.header-contacts {
-  margin-left: auto;
-  display: flex;
-}
-.header-contacts__item:nth-child(1) {
-  margin-right: 30px;
-}
-.header-contacts__link {
-  display: flex;
-  align-items: center;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding: 32px 0;
-  color:  $secondary-text-color ;
-  transition: color 250ms  $timing-function ;
-}
-.header-contacts__link:hover,
-.header-contacts__link:focus {
-  color:  $current-color ;
-}
-.header-contacts__mail-icon,
-.header-contacts__phone-icon {
-  margin-right: 10px;
-  fill: rgba(117, 117, 117, 1);
-  transition: fill 250ms  $timing-function ;
-}
-.header-contacts__link:hover .header-contacts__phone-icon,
-.header-contacts__link:focus .header-contacts__phone-icon,
-.header-contacts__link:hover .header-contacts__mail-icon,
-.header-contacts__link:focus .header-contacts__mail-icon {
-  fill:  $current-color ;
-}
+// .site-nav__logo-part1 {
+//   @extend %logo;
+//   color: $current-color;
+// }
+// .site-nav__logo-part2 {
+//   @extend %logo;
+//   color: $primary-text-color;
+// }
+// .site-nav__list {
+//   display: flex;
+// }
+// .site-nav__list-item:not(:last-child) {
+//   margin-right: 50px;
+// }
+// .site-nav__list-link {
+//   display: block;  
+//   padding: 32px 0;
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.02em;
+//   color:  $primary-text-color ;
+//   transition: color 250ms  $timing-function ;
+// }
+// .site-nav__list-link:focus,
+// .site-nav__list-link:hover {
+//   color:  $current-color ;
+// }
+// .site-nav__list-item {
+//   position: relative;
+// }
+// .site-nav__list-link--current::after {
+//   content: '';
+//   position: absolute;
+//   transform: translateX(-100%);
+//   bottom: 0px;
+//   width: 100%;
+//   border-bottom: solid 4px  $current-color ;
+//   border-radius: 2px;
+// }
+// .site-nav__list-link--current {
+//   color:  $current-color ;
+// }
+// .header-contacts {
+//   margin-left: auto;
+//   display: flex;
+// }
+// .header-contacts__item:nth-child(1) {
+//   margin-right: 30px;
+// }
+// .header-contacts__link {
+//   display: flex;
+//   align-items: center;
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.02em;
+//   padding: 32px 0;
+//   color:  $secondary-text-color ;
+//   transition: color 250ms  $timing-function ;
+//   &:hover,
+//   &:focus {
+//     color:  $current-color ;
+//   }
+// }
+// .header-contacts__mail-icon,
+// .header-contacts__phone-icon {
+//   margin-right: 10px;
+//   fill: rgba(117, 117, 117, 1);
+//   transition: fill 250ms  $timing-function ;
+//   .header-contacts__link:hover &,
+//   .header-contacts__link:focus &{
+//   fill:  $current-color ;
+//   }
+// }
