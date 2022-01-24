@@ -1,6 +1,7 @@
-// .header {
-//   border-bottom: 1px solid #ececec;
-// }
+.header {
+  border-bottom: 1px solid #ececec;
+  position: relative;
+}
 // .header__block {
 //   display: flex;
 // }
@@ -24,6 +25,42 @@
 // .site-nav__list {
 //   display: flex;
 // }
+.menu__button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  z-index: 1;
+  background-color: teal;
+
+  & .close-icon {
+    display: none;
+  }
+  &.is-open .close-icon{
+     display: block;
+  }
+  &.is-open .icon-burger{
+    display: none;
+  }
+
+  
+}
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  padding: 48px 40px;
+  width: 100%;
+
+  background-color: $main-title-color;
+  background-color: teal;
+  &.is-open{
+    display: block;
+  }
+}
 // .site-nav__list-item:not(:last-child) {
 //   margin-right: 50px;
 // }
