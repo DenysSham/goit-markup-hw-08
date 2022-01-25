@@ -69,7 +69,7 @@
 }
 .worker__foto {
   display: block;
-  width: 10px;
+  width: calc(100% - 30px); 
 }
 .worker__information {
   padding-top: 30px;
