@@ -254,6 +254,9 @@ a {
   }
 }
 @media screen and (min-width: 768px) {
+  .site-nav__list-item {
+    position: relative;
+  }
   .site-nav__list-item:not(:last-child) {
     margin-right: 50px;
   }

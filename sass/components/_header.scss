@@ -89,7 +89,8 @@
    }}
    @media screen and(min-width:768px){
       display: flex;
-      align-items: center;}
+      align-items: center;
+      }
    @media screen and(min-width:768px){
    }
 
@@ -146,6 +147,7 @@
       }
 }  
    @media screen and (min-width: 768px){
+      position: relative;
       &:not(:last-child){
          margin-right: 50px;
       }}
@@ -189,6 +191,8 @@
 
 .site-nav__list-link--current::after {
    content: '';
+
+   
    @media screen and(min-width:768px){
    position: absolute;
    transform: translateX(-100%);
