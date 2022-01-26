@@ -4,8 +4,39 @@
 }
 .header__block {
    padding: 10px 15px;
-  }
-  .site-nav {
+}
+.site-nav__logo-part1 {
+   font-family: Raleway;
+   font-style: normal;
+   font-size: 24px;
+   line-height: 1.17;
+   color: $current-color;
+   @media screen and(min-width:1200px) {
+      font-family: Raleway;
+      font-style: normal;
+      font-size: 26px;
+      line-height: 1.19;
+      color: $current-color;
+   }
+}
+.site-nav__logo-part2 {
+   font-family: Raleway;
+   font-style: normal;
+   font-size: 24px;
+   line-height: 1.17;
+   color: $primary-text-color;
+   @media screen and (min-width: 768px){
+      margin-right: 88px;}
+   @media screen and (min-width:1200px) {
+      margin-right: 93px;
+      font-family: Raleway;
+      font-style: normal;
+      font-size: 26px;
+      line-height: 1.19;
+      
+   }
+}
+.site-nav {
    display: flex;
    @media screen and(max-width:767px){
    justify-content: space-between;
@@ -31,6 +62,9 @@
    &.is-open .icon-burger {
       display: none;
    }
+   &:hover{
+      fill: $current-color;
+   }
    @media screen and (min-width: 768px) {
       display: none;
    }
@@ -42,29 +76,34 @@
    width: 100%;
    height: 100vh;
    top: 0;
-   left: 0;
+   left: 0;   
    padding: 48px 40px;
    background-color: $main-title-color;
    
    &.is-open {
-      display: block;  
+      display: flex;
+        
    }
    @media screen and(min-width:768px){
       display: block;}
 
 }
 }
-
+.separate-mobile-menu{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
 
 // .nav-container {
 
 
 
 // }
-.contacts-container {
-  display:flex;
-  flex-direction: reverse;
-}
+// .contacts-container {
+//   display:flex;
+//   flex-direction: reverse;
+// }
 .social-container {
    @media screen and (min-width: 768px) {
       display: none;
@@ -72,9 +111,8 @@
 }
 .header-social {
    display: flex;
-   position: absolute;
-   bottom: 48px;
-   &__link {
+   margin-top: 64px;
+      &__link {
       display: inline-block;
       margin-right: 10px;
       font-family: Roboto;
@@ -93,54 +131,32 @@
 }
 
 
+   // @media screen and(min-width:1200px){
+   // padding-top: 24px;
+   // padding-bottom: 25px;
+   // margin-right: 93px;}
 
-.site-nav__link {
-   display: inline-flex;
-   align-items: center;
 
-
-
-   @media screen and(min-width:1200px){
-   padding-top: 24px;
-   padding-bottom: 25px;
-   margin-right: 93px;}
+.site-nav__list {
+   @media screen and (min-width: 768px){
+   display: flex;}
 }
 
-.site-nav__logo-part1 {
-   font-family: Raleway;
-   font-style: normal;
-   font-size: 24px;
-   line-height: 1.17;
-   color: $current-color;
-   @media screen and(min-width:1200px) {
-      font-family: Raleway;
-      font-style: normal;
-      font-size: 26px;
-      line-height: 1.19;
-      color: $current-color;
-   }
+.site-nav__list-item{
+   @media screen and (max-width: 767px){
+      &:not(:first-child){
+         margin-top: 32px;
+      }
+}  
+   @media screen and (min-width: 768px){
+      &:not(:last-child){
+         margin-right: 50px;
+      }}
+   @media screen and (min-width: 1200px){
+       &:not(:last-child) {
+         margin-right: 50px;
+}}
 }
-.site-nav__logo-part2 {
-   font-family: Raleway;
-   font-style: normal;
-   font-size: 24px;
-   line-height: 1.17;
-   color: $primary-text-color;
-   @media screen and (min-width:1200px) {
-      font-family: Raleway;
-      font-style: normal;
-      font-size: 26px;
-      line-height: 1.19;
-      
-   }
-}
-// // .site-nav__list {
-// //    display: flex;
-// // }
-
-// .site-nav__list-item:not(:last-child) {
-//    margin-right: 50px;
-// }
 .site-nav__list-link {
    @media screen and(max-width:767px){
    font-family: Roboto;
@@ -161,7 +177,7 @@
    line-height: 1.14;
    letter-spacing: 0.02em;
    transition: color 250ms $timing-function;
-   }   
+   }
 }
 .site-nav__list-link--current{
    color: $current-color;
@@ -176,7 +192,6 @@
 
 .site-nav__list-link--current::after {
    content: '';
-
    @media screen and(min-width:768px){
    position: absolute;
    transform: translateX(-100%);
@@ -189,19 +204,37 @@
 //    color: $current-color;
 // }
 .header-contacts {
-   @media screen and(max-width:767px){
-      display: inline-flex;
-      
    
-
+   @media screen and(max-width:767px){
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+   }
    @media screen and(min-width:1200px){
    margin-left: auto;
    display: flex;
       &__item:nth-child(1) {
          margin-right: 30px;
-}}}}
+}}}
 .header-contacts__link {
-   display: flex;
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 28px;
+   letter-spacing: 0.02em;
+   color: $secondary-text-color;
+   &.for-mobile {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.176;
+      letter-spacing: 0.02em;
+      color: $current-color;
+   }
+   
+   @media screen and (min-width: 1200px){
    align-items: center;
    font-style: normal;
    font-weight: 500;
@@ -209,20 +242,29 @@
    line-height: 1.14;
    letter-spacing: 0.02em;
    padding: 32px 0;
-   color: $secondary-text-color;
+   
    transition: color 250ms $timing-function;
    &:hover,
    &:focus {
       color: $current-color;
-}}
-// }
-// .header-contacts__mail-icon,
-// .header-contacts__phone-icon {
-//    margin-right: 10px;
-//    fill: rgba(117, 117, 117, 1);
-//    transition: fill 250ms $timing-function;
-//    .header-contacts__link:hover &,
-//    .header-contacts__link:focus & {
-//       fill: $current-color;
-//    }
-// }
+}}}
+
+.header-contacts__mail-icon,
+.header-contacts__phone-icon {
+   @media screen and (max-width: 767px){
+      display: none;}
+
+   @media screen and (min-width: 768px){
+   margin-right: 8px;
+   fill: rgba(117, 117, 117, 1);
+   transition: fill 250ms $timing-function;
+   }
+   @media screen and (min-width: 1200px){
+      margin-right: 10px;  }
+   .header-contacts__link:hover &,
+   .header-contacts__link:focus & {
+      @media screen and (min-width: 768px){
+      fill: $current-color;
+      }
+}
+}
