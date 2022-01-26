@@ -41,6 +41,9 @@
    @media screen and(max-width:767px){
    justify-content: space-between;
    }
+   @media screen and(min-width:768px){
+      align-items: baseline;
+   }
 }
 .menu__button {
    display: flex;
@@ -83,27 +86,18 @@
    &.is-open {
       display: flex;
         
-   }
+   }}
    @media screen and(min-width:768px){
-      display: flex;}
+      display: flex;
+      align-items: center;}
+   @media screen and(min-width:768px){
+   }
 
 }
+.contacts-container {
+   @media screen and (min-width:768px){
+      margin-left: auto;} 
 }
-// .separate-mobile-menu{
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: space-between;
-// }
-
-// .nav-container {
-
-
-
-// }
-// .contacts-container {
-//   display:flex;
-//   flex-direction: reverse;
-// }
 .social-container {
    @media screen and (min-width: 768px) {
       display: none;
@@ -213,8 +207,11 @@
       flex-direction: column-reverse;
       justify-content: flex-end;
    }
+   @media screen and(min-width:768px){
+   
+   }
    @media screen and(min-width:1200px){
-   margin-left: auto;
+   
    display: flex;
       &__item:nth-child(1) {
          margin-right: 30px;
@@ -227,6 +224,7 @@
    line-height: 28px;
    letter-spacing: 0.02em;
    color: $secondary-text-color;
+
    &.for-mobile {
       font-family: Roboto;
       font-style: normal;
@@ -235,22 +233,54 @@
       line-height: 1.176;
       letter-spacing: 0.02em;
       color: $current-color;
+      margin-bottom: 32px;
    }
+   @media screen and(min-width:768px){
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.02em;
+      color: $secondary-text-color;
+      transition: color 250ms $timing-function;
+      &.for-mobile {
+         font-family: Roboto;
+         font-style: normal;
+         font-weight: 500;
+         font-size: 12px;
+         line-height: 1.17;
+         letter-spacing: 0.02em;
+         margin-top: 10px;
+         color: $secondary-text-color;
+         transition: color 250ms $timing-function;
+      }
+      &:hover,
+      &:focus {
+      color: $current-color;
+   }}
    
    @media screen and (min-width: 1200px){
-   align-items: center;
    font-style: normal;
    font-weight: 500;
    font-size: 14px;
    line-height: 1.14;
    letter-spacing: 0.02em;
    padding: 32px 0;
-   
-   transition: color 250ms $timing-function;
-   &:hover,
-   &:focus {
-      color: $current-color;
-}}}
+   }
+   &.for-mobile {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      margin-top: 10px;
+      color: $secondary-text-color;
+      transition: color 250ms $timing-function;
+   }
+      
+}
 
 .header-contacts__mail-icon,
 .header-contacts__phone-icon {
