@@ -134,8 +134,11 @@
    // padding-top: 24px;
    // padding-bottom: 25px;
    // margin-right: 93px;}
-
-
+.separate-mobile-menu{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
 .site-nav__list {
    @media screen and (min-width: 768px){
    display: flex;}
