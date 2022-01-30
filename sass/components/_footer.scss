@@ -3,10 +3,20 @@
 //   padding-bottom: 60px;
 //   background-color: $background ;
 // }
-// .footer__content {
-//   display: flex;
-//   flex-wrap: wrap;
+.footer__content {
   
+  @media screen and (min-width: 1200px){
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+  }
+}
+.separate-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 //   @media screen and (min-width: 480px) {
 //     justify-content: space-around;
 //   }
