@@ -89,11 +89,11 @@
         
    }}
    @media screen and(min-width:768px){
+      width: 100%;
       display: flex;
       align-items: center;
       }
-   @media screen and(min-width:768px){
-   }
+  
 
 }
 .contacts-container {
@@ -138,6 +138,11 @@
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   @media screen and (min-width:768px){
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+   }
 }
 .site-nav__list {
    @media screen and (min-width: 768px){
@@ -179,19 +184,18 @@
    font-size: 14px;
    line-height: 1.14;
    letter-spacing: 0.02em;
+   color: $secondary-text-color;
    transition: color 250ms $timing-function;
    }
 }
 .site-nav__list-link--current{
    color: $current-color;
 }
-// .site-nav__list-link:focus,
-// .site-nav__list-link:hover {
-//    color: $current-color;
-// }
-// .site-nav__list-item {
-//    position: relative;
-// }
+.site-nav__list-link:focus,
+.site-nav__list-link:hover {
+   color: $current-color;
+}
+
 
 .site-nav__list-link--current::after {
    content: '';
@@ -205,9 +209,6 @@
    border-bottom: solid 4px $current-color;
    border-radius: 2px;}
 }
-// .site-nav__list-link--current {
-//    color: $current-color;
-// }
 .header-contacts {
    
    @media screen and(max-width:767px){
@@ -254,17 +255,6 @@
       letter-spacing: 0.02em;
       color: $secondary-text-color;
       transition: color 250ms $timing-function;
-      &.for-mobile {
-         font-family: Roboto;
-         font-style: normal;
-         font-weight: 500;
-         font-size: 12px;
-         line-height: 1.17;
-         letter-spacing: 0.02em;
-         margin-top: 10px;
-         color: $secondary-text-color;
-         transition: color 250ms $timing-function;
-      }
       &:hover,
       &:focus {
       color: $current-color;
@@ -278,19 +268,7 @@
    line-height: 1.14;
    letter-spacing: 0.02em;
    padding: 32px 0;
-   
-   &.for-mobile {
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 1.14;
-      letter-spacing: 0.02em;
-      margin-top: 10px;
-      color: $secondary-text-color;
-      transition: color 250ms $timing-function;
-   }}
-      
+      } 
 }
 
 .header-contacts__mail-icon,
