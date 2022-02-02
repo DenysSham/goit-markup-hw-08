@@ -1,8 +1,8 @@
-// .footer {
-//   padding-top: 60px;
-//   padding-bottom: 60px;
-//   background-color: $background ;
-// }
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $background ;
+}
 .footer__content {
   
   @media screen and (min-width: 1200px){
@@ -11,14 +11,95 @@
     align-items: baseline;
   }
 }
+
 .separate-footer{
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (min-width: 748px) {
+  @media screen and (min-width: 768px) {
     flex-direction: row;
+    justify-content: space-between;
+  }
+  @media (min-width: 768px) and (max-width: 1199px){
+    margin-bottom: 60px;
+  } 
+}
+.footer__addres-field {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;  
+  }
+  
+}
+.footer__link {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.footer__logo-part1 {
+  font-family: Raleway;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.17;
+  color: $current-color;
+  @media screen and(min-width:1200px) {
+     font-size: 26px;
+     line-height: 1.19;
   }
 }
+.footer__logo-part2 {
+  font-family: Raleway;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.17;
+  color: $main-title-color ;
+  @media screen and(min-width:1200px) {
+     font-size: 26px;
+     line-height: 1.19;
+  }
+}
+  
+  
+
+
+.address__street-link {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $main-title-color ;
+  transition: color 250ms $timing-function;
+  &:hover,
+  &:focus {
+  color: $current-color ;
+}
+}
+
+.footer__contacts {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $addres-color ;
+  transition: color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    color: $current-color ;
+  }
+}
+.address{
+  &:not(:last-child) {
+  margin-bottom: 9px;
+}}
+
+
+
+
+
 .social-list{
   display: flex;
   &__item{
@@ -26,13 +107,15 @@
     &:not(:last-child){
     margin-right: 10px;
   }}
-  &__link {
+}
+
+.social-list__link {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 44px;
   height: 44px;
-  background-color: #ffffff1a;
+  background-color: #FFFFFF1A;
   border-radius: 50%;
   transition: background-color 250ms $timing-function;
   &:focus,
@@ -40,113 +123,90 @@
     background-color: $current-color ;
   }
 }
+
+.footer__join {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+  
 }
-// .footer__addres-field {
-//   margin-right: 70px;
-// }
-// .footer__link {
-//   display: inline-block;
-//   margin-bottom: 20px;
-// }
-// .footer__logo-part1{
-//   @extend %logo;
-//   color: $current-color ;
-// }
-// .footer__logo-part2 {
-//   @extend %logo;
-//   color: $main-title-color ;
-// }
-
-// .address__street-link {
-//   font-style: normal;
-//   font-size: 14px;
-//   line-height: 1.71;
-//   letter-spacing: 0.03em;
-//   color: $main-title-color ;
-//   transition: color 250ms $timing-function;
-//   &:hover,
-//   &:focus {
-//   color: $current-color ;
-// }
-// }
-
-// .footer__contacts {
-//   font-style: normal;
-//   font-size: 14px;
-//   line-height: 1.71;
-//   letter-spacing: 0.03em;
-//   color: $addres-color ;
-//   transition: color 250ms $timing-function;
-//   &:hover,
-//   &:focus {
-//     color: $current-color ;
-//   }
-// }
-// .address{
-//   &:not(:last-child) {
-//   margin-bottom: 9px;
-// }}
-// .join{
-//   margin-right: 93px;
-// }
-// .join__label {
-//   display: inline-block;
-//   margin-bottom: 20px;
-//   font-style: normal;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.03em;
-//   text-transform: uppercase;
-//   color: $main-title-color ;
-// }
+.join__label {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $main-title-color ;
+}
 
 .social-list__icon--white {
   fill: $main-title-color ;
   transition: fill 250ms $timing-function;
 }
-// .subscribe-form{
-//   display: flex;
-//   align-items: flex-end;
+.subscribe-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
-// }
-// .subscribe-form__field{
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-//   height: 86px;
-//   margin-right: 12px;
-// }
-// .subscribe-form__text {   
-//   margin-bottom: 20px;
-//   font-family: Roboto;
-//   font-style: normal;
-//   font-weight: 700;
-//   font-size: 14px;
-//   line-height: 1.142;
-//   letter-spacing: 0.03em;
-//   text-transform: uppercase;
-//   color: $main-title-color ;
-// }
 
-// .subscribe-form__input{
-//   padding: 15px 16px;
-//   border: 1px solid rgba(255, 255, 255, 0.3);
-//   color: $main-title-color;
-//   background-color: $background;
-//   filter: drop-shadow(0px 4px 4px) rgba(0, 0, 0, 0.15);
-//   border-radius: 4px;
-//   &::placeholder{
-//     color: rgba(255, 255, 255, 0.6);
-//   }
-// }
-// .subscribe-form__button{
-//   @extend %button;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 10px 28px 10px 29px;
-// }
-// .subscribe-form__btn-icon{
-//   fill: $main-title-color;
-//   margin-left: 10px;
-// }
+  @media screen and (min-width: 1200px){
+    align-items: flex-end;
+
+  }
+}
+.subscribe-form__field{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 86px;
+  margin-right: 12px;
+}
+.subscribe-form__text {   
+  margin-bottom: 20px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $main-title-color ;
+}
+
+.subscribe-form__input{
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;    
+  }
+  margin: auto;
+  max-width: 450px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: $main-title-color;
+  background-color: $background;
+  filter: drop-shadow(0px 4px 4px) rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  &::placeholder{
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+.subscribe-form__button{
+  @extend %button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 28px 10px 29px;
+}
+.subscribe-form__btn-icon{
+  fill: $main-title-color;
+  margin-left: 10px;
+}
