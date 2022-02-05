@@ -38,7 +38,7 @@
   border-radius: 0px 0px 4px 4px;
   
   &:not(:last-child){
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 30px;
     }  
   }
@@ -69,7 +69,8 @@
 }
 .worker__foto {
   display: block;
-  width: calc(100% - 30px); 
+  max-width: 100%;
+  // width: calc(100% - 30px); 
 }
 .worker__information {
   padding-top: 30px;
