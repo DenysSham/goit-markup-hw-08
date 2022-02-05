@@ -40,7 +40,11 @@ a {
       width: 1200px;
    }
 }
-
+   img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
 
 %button {
    
