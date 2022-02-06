@@ -750,15 +750,9 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-right: -15px;
+    margin: -15px;
   }
 }
-@media screen and (min-width: 1200px) {
-  .team-section__list {
-    margin-right: -15px;
-  }
-}
-
 .worker {
   overflow: hidden;
   background-color: #f5f4fa;
@@ -773,7 +767,7 @@ img {
 }
 @media screen and (min-width: 480px) {
   .worker {
-    width: calc(100% - 30px);
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) {
