@@ -18,7 +18,7 @@
   align-items: center;
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   @media (min-width: 768px) and (max-width: 1199px){
     margin-bottom: 60px;
@@ -193,6 +193,9 @@
   }
   @media screen and (min-width: 768px) {
     width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 360px;
   }
   display: inline-block;
   max-width: 450px;

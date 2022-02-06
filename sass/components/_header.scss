@@ -3,8 +3,9 @@
    border-bottom: 1px solid #ececec;
 }
 .header__block {
+   @media screen and(max-width:767px) {
    padding: 10px 15px;
-}
+}}
 .site-nav__logo-part1 {
    font-family: Raleway;
    font-style: normal;
@@ -33,12 +34,13 @@
 }
 .site-nav {
    display: flex;
+   align-items: baseline;
    @media screen and(max-width:767px){
    justify-content: space-between;
    }
    @media screen and(min-width:768px){
       width: 100%;
-      align-items: baseline;
+      
    }
 }
 .menu__button {
